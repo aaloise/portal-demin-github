@@ -1,0 +1,39 @@
+site_name: Portal DEMIN
+site_url: https://SEU-USUARIO.github.io/portal-demin-github/
+repo_url: https://github.com/SEU-USUARIO/portal-demin-github
+repo_name: GitHub
+
+theme:
+  name: material
+  features:
+    - navigation.tabs        # Abas no topo (Estilo Portal)
+    - navigation.tabs.sticky
+    - navigation.indexes
+    - content.code.copy
+  palette: 
+    scheme: default
+    primary: indigo
+    accent: blue
+
+# Ativa o plugin de versionamento
+extra:
+  version:
+    provider: mike
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  
+  - CGTIC (Tecnologia):
+      - Visão Geral: cgtic/index.md
+  
+  - CGGEO (Geoinformação):
+      - Visão Geral: cggeo/index.md
+
+  - CGDAI (Dados):
+      - Visão Geral: cgdai/index.md
+
+  - CGDIG (Digital):
+      - Visão Geral: cgdig/index.md
