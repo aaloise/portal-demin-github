@@ -1,5 +1,9 @@
-# Portal DEMIN
-Bem-vindo ao Portal de Documentação.
+# Portal DEMIN (Versão 1.0)
 
-!!! tip "Navegação no Tempo"
-    Use o seletor de versões no topo da página (ao lado do título) para alternar entre a versão atual (dev) e versões antigas.
+Bem-vindo à primeira versão da nossa base de conhecimento.
+
+## Status
+✅ Esta versão é estável e foi homologada em 2024.
+
+!!! info "Nota Histórica"
+    Nesta época, ainda usávamos o sistema antigo de VPN.
