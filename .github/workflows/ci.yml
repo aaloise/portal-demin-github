@@ -1,0 +1,45 @@
+name: Publicar Portal Versionado
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*' # Dispara quando criar tag v1.0, v2.0...
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configurar Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Instalar Python e Mike
+        run: |
+          pip install mkdocs mkdocs-material mike
+
+      - name: Publicar Versão
+        run: |
+          # Baixa o histórico das versões anteriores
+          git fetch origin gh-pages --depth=1
+
+          if [[ $GITHUB_REF == refs/tags/* ]]; then
+            # Se for Tag (v1.0), publica congelado
+            VERSION=${GITHUB_REF#refs/tags/v}
+            mike deploy $VERSION latest --push --update-aliases
+          else
+            # Se for Main, publica como 'dev'
+            mike deploy dev --push
+            # Define 'dev' como padrão para não dar erro 404
+            mike set-default dev --push
+          fi
