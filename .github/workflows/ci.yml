@@ -31,7 +31,7 @@ jobs:
       - name: Publicar Versão
         run: |
           # Baixa o histórico das versões anteriores
-          git fetch origin gh-pages --depth=1
+          git fetch origin gh-pages --depth=1 || echo "Branch gh-pages ainda não existe, será criada agora."
 
           if [[ $GITHUB_REF == refs/tags/* ]]; then
             # Se for Tag (v1.0), publica congelado
