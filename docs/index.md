@@ -1,6 +1,10 @@
-# Portal DEMIN (Versão 1.0)
+# Portal DEMIN (Versão 2.0)
 
-### 📅 Versão Histórica (2024)
+### 🚨 Versão Vigente (2026)
 
-Esta é a documentação antiga.
-* Acesso VPN: `vpn.antiga.gov.br`
+Atualização completa das normas!
+
+!!! tip "Novidade"
+    Agora usamos o acesso único Gov.br.
+
+* Acesso VPN: `vpn.nova.gov.br`
