@@ -5,7 +5,7 @@ on:
     branches:
       - main
     tags:
-      - 'v*' # Dispara quando criar tag v1.0, v2.0...
+      - 'v*'
 
 permissions:
   contents: write
@@ -30,8 +30,9 @@ jobs:
 
       - name: Publicar Versão
         run: |
-          # Baixa o histórico das versões anteriores
-          git fetch origin gh-pages --depth=1 || echo "Branch gh-pages ainda não existe, será criada agora."
+          # --- CORREÇÃO AQUI ---
+          # O "|| true" impede que o robô trave se a branch não existir
+          git fetch origin gh-pages --depth=1 || echo "Branch gh-pages ainda não existe (Primeira execução)"
 
           if [[ $GITHUB_REF == refs/tags/* ]]; then
             # Se for Tag (v1.0), publica congelado
@@ -40,6 +41,7 @@ jobs:
           else
             # Se for Main, publica como 'dev'
             mike deploy dev --push
-            # Define 'dev' como padrão para não dar erro 404
+            
+            # Define 'dev' como padrão (Cria o index.html na raiz para não ficar tela branca)
             mike set-default dev --push
           fi
