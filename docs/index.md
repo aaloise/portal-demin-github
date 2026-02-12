@@ -1,4 +1,6 @@
-# Portal DEMIN (Rascunho)
+# Portal DEMIN (Versão 1.0)
 
-🚧 Área de trabalho da equipe.
-Aqui estamos preparando as novidades para 2027.
+### 📅 Versão Histórica (2024)
+
+Esta é a documentação antiga.
+* Acesso VPN: `vpn.antiga.gov.br`
