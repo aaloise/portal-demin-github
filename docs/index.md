@@ -1,6 +1,4 @@
-# Portal DEMIN (Versão 2.0)
+# Portal DEMIN (Rascunho)
 
-🚨 **Status: Versão 2026 (VIGENTE)**
-
-Atualização completa!
-* **Nova VPN:** vpn.economia.gov.br
+🚧 Área de trabalho da equipe.
+Aqui estamos preparando as novidades para 2027.
