@@ -674,10 +674,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#normas" class="md-nav__link">
+  <a href="#fluxo-de-homologacao" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Normas
+        📐 Fluxo de Homologação
       
     </span>
   </a>
@@ -704,12 +704,21 @@
   
 
 
-<h1 id="geoinformacao-cggeo">Geoinformação (CGGEO)</h1>
-<h2 id="normas">Normas</h2>
-<ul>
-<li>Padrão Cartográfico (SIRGAS 2000)</li>
-<li>Instalação QGIS 3.28</li>
-</ul>
+<h1 id="geoinformacao-cggeo">🗺️ Geoinformação (CGGEO)</h1>
+<p>Diretrizes para produção cartográfica e homologação de plantas na SPU.</p>
+<h2 id="fluxo-de-homologacao">📐 Fluxo de Homologação</h2>
+<p>O processo de validação de georreferenciamento segue o fluxo rigoroso abaixo:</p>
+<p>```mermaid
+graph LR
+    A[👷 Engenheiro Externo] --&gt;|Submete DWG/SHP| B(Protocolo SPU)
+    B --&gt; C{Análise CGGEO}
+    C --&gt;|✅ Aprovado| D[Certificação]
+    C --&gt;|❌ Reprovado| E[Devolução com Nota]
+    E --&gt;|Correção| A
+    D --&gt; F[Base Cartográfica Oficial]</p>
+<pre><code>style D fill:#d4edda,stroke:#28a745,stroke-width:2px
+style E fill:#f8d7da,stroke:#dc3545,stroke-width:2px
+</code></pre>
 
 
 
