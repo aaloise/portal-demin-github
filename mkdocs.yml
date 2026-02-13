@@ -39,14 +39,30 @@ nav:
       - Visão Geral: cgdig/index.md
 
 markdown_extensions:
+  # Permite caixas coloridas (!!! tip)
   - admonition
+  
+  # Permite detalhes expansíveis (??? info)
   - pymdownx.details
+  
+  # Permite ícones (:material-home:) e emojis
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  
+  # Permite blocos de código avançados e diagramas (Mermaid)
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  
+  # Permite Abas de navegação dentro do texto (=== "Windows")
   - pymdownx.tabbed:
       alternate_style: true
+  
+  # Permite listas de atributos (usado para botões e cores)
   - attr_list
+  
+  # Permite HTML dentro do Markdown
   - md_in_html
