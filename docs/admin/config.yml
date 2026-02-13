@@ -1,0 +1,63 @@
+# --- CONFIGURAÇÃO DO MODO DEMONSTRAÇÃO ---
+# O backend 'test-repo' permite testar a interface sem login real.
+# Em produção, trocaríamos por 'git-gateway' ou 'gitlab'.
+backend:
+  name: test-repo
+
+# Onde as imagens enviadas pelo painel serão salvas no repositório
+media_folder: "docs/assets/images"
+
+# Como as imagens serão referenciadas no HTML final
+public_folder: "assets/images"
+
+# Configurações de URL e tratamento de caracteres
+slug:
+  encoding: "ascii"
+  clean_accents: true
+
+# --- DEFINIÇÃO DAS COLEÇÕES (MENU LATERAL DO PAINEL) ---
+collections:
+  # 1. Área da Diretoria (Estratégico)
+  - name: "demin"
+    label: "📂 Diretoria (Estratégico)"
+    folder: "docs/demin"
+    create: true
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Conteúdo", name: "body", widget: "markdown"}
+
+  # 2. Área da TI (Tático/Operacional)
+  - name: "cgtic"
+    label: "💻 Tecnologia (TIC)"
+    folder: "docs/cgtic"
+    create: true
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Conteúdo", name: "body", widget: "markdown"}
+
+  # 3. Área da Geo (Tático/Operacional)
+  - name: "cggeo"
+    label: "🗺️ Geoinformação (GEO)"
+    folder: "docs/cggeo"
+    create: true
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Conteúdo", name: "body", widget: "markdown"}
+
+  # 4. Área de Dados
+  - name: "cgdai"
+    label: "📊 Dados (DAI)"
+    folder: "docs/cgdai"
+    create: true
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Conteúdo", name: "body", widget: "markdown"}
+
+  # 5. Área Digital
+  - name: "cgdig"
+    label: "📱 Digital (DIG)"
+    folder: "docs/cgdig"
+    create: true
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Conteúdo", name: "body", widget: "markdown"}
