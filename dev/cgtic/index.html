@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tecnologia-cgtic" class="md-skip">
+        <a href="#tecnologia-da-informacao-cgtic" class="md-skip">
           Skip to content
         </a>
       
@@ -674,10 +674,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#manuais-tecnicos" class="md-nav__link">
+  <a href="#status-dos-sistemas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Manuais Técnicos
+        🚦 Status dos Sistemas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao-de-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 Configuração de Ambiente
       
     </span>
   </a>
@@ -704,12 +715,67 @@
   
 
 
-<h1 id="tecnologia-cgtic">Tecnologia (CGTIC)</h1>
-<h2 id="manuais-tecnicos">Manuais Técnicos</h2>
+<h1 id="tecnologia-da-informacao-cgtic">💻 Tecnologia da Informação (CGTIC)</h1>
+<p>Bem-vindo ao catálogo de serviços técnicos da SPU. Abaixo encontra os sistemas críticos e o seu status operacional.</p>
+<h2 id="status-dos-sistemas">🚦 Status dos Sistemas</h2>
+<div class="grid cards">
 <ul>
-<li>Configuração de VPN</li>
-<li>Acesso ao Sidor</li>
+<li>
+<p>:material-server-network: <strong>Rede Corporativa</strong>
+    ---
+    Operacional
+    ---
+    <a href="#">:material-arrow-right: Ver Topologia</a></p>
+</li>
+<li>
+<p>:material-database-check: <strong>Sidor (Patrimônio)</strong>
+    ---
+    Operacional
+    ---
+    <a href="#">:material-arrow-right: Acessar Manual</a></p>
+</li>
+<li>
+<p>:material-cloud-alert: <strong>VPN (Acesso Remoto)</strong>
+    ---
+    Instabilidade na Região Sul
+    ---
+    <a href="manual-vpn.md">:material-arrow-right: Solução de Erros</a></p>
+</li>
 </ul>
+</div>
+<hr />
+<h2 id="configuracao-de-ambiente">🔧 Configuração de Ambiente</h2>
+<p>Selecione o seu sistema operativo para ver as instruções específicas de configuração:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">:material-microsoft-windows: Windows 10/11</label><label for="__tabbed_1_2">:material-linux: Ubuntu / Debian</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li>Baixe o instalador oficial no <strong>Portal de Software</strong>.</li>
+<li>Execute como Administrador.</li>
+<li>No campo "Gateway", insira:
+    <div class="highlight"><pre><span></span><code>vpn.economia.gov.br:443
+</code></pre></div></li>
+</ol>
+<div class="admonition success">
+<p class="admonition-title">Recomendado</p>
+<p>Utilize sempre a versão <strong>7.0.2</strong> ou superior do cliente VPN para compatibilidade com o Token.</p>
+</div>
+</div>
+<div class="tabbed-block">
+<p>Instale via terminal utilizando o <code>openconnect</code>:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>openconnect
+sudo<span class="w"> </span>openconnect<span class="w"> </span>vpn.economia.gov.br
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Atenção Linux</p>
+<p>O suporte a Linux é comunitário e não possui SLA de atendimento pela central 0800.</p>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<p><a class="md-button md-button--primary" href="https://suporte.gov.br">Abrir Chamado Técnico</a>
+<a class="md-button" href="#">Ver Política de Senhas</a></p>
 
 
 
