@@ -4,6 +4,8 @@
 backend:
   name: test-repo
 
+publish_mode: editorial_workflow
+
 # Onde as imagens enviadas pelo painel serão salvas no repositório
 media_folder: "docs/assets/images"
 
