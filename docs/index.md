@@ -1,10 +1,4 @@
-# Portal DEMIN (Versão 2.0)
+# Portal DEMIN (Rascunho)
 
-### 🚨 Versão Vigente (2026)
-
-Atualização completa das normas!
-
-!!! tip "Novidade"
-    Agora usamos o acesso único Gov.br.
-
-* Acesso VPN: `vpn.nova.gov.br`
+🚧 Área de trabalho da equipe.
+Aqui estamos preparando as novidades para 2027.
